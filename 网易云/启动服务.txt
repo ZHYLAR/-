@@ -1,0 +1,2 @@
+cd NeteaseCloudMusicApi
+node app.js

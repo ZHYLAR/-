@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/utils.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" type="text/css" href="../css/player.css">
+</head>
+<body>
+    
+    
+    <!--轮播图-->
+    <div class="sliderWrap" id='slider_wrap_id'>
+        <div class="wrap" class="showDiv"><img id="current_slider">
+            <!--下载客户端-->
+            <div class="download_app">
+                <a href="javascript:;" class="downBtn"></a>
+                <!--下载框两边的阴影-->
+                <span class="shadow"></span>
+                <span class="shadowr"></span>
+            </div>
+            <!--轮播图下面的小点-->
+            <div class="slider_Dots" id="dots">
+                <a href="javascript:;" id="dot1"></a>
+                <a href="javascript:;" id="dot2"></a>
+                <a href="javascript:;" id="dot3"></a>
+                <a href="javascript:;" id="dot4"></a>
+                <a href="javascript:;" id="dot5"></a>
+                <a href="javascript:;" id="dot6"></a>
+                <a href="javascript:;" id="dot7"></a>
+                <a href="javascript:;" id="dot8"></a>
+            </div>
+
+            <!--左右按钮-->
+            <a href="javascript:;" class="leftBtn" id="leftBtnId"></a>
+            <a href="javascript:;" class="rightBtn" id="rightBtnId"></a>
+        </div>
+    </div>
+
+
+    <!--页面主体-->
+    <div class="mainWrap">
+        <!--中间部分-->
+        <div class="middleWrap">
+            <!--左容器-->
+            <div class="leftWrap">
+                <!--热门推荐-->
+                <div class="hot_video">
+                    <a href="javascript:;" class="rmtj_title">热门推荐</a>
+                    <div class="rmtj_tabBtn">
+                        <a class="a_666 f12" href="javascript:;">华语</a>
+                        <span class="line">|</span>
+                        <a class="a_666 f12" href="javascript:;">流行</a>
+                        <span class="line">|</span>
+                        <a class="a_666 f12" href="javascript:;">摇滚</a>
+                        <span class="line">|</span>
+                        <a class="a_666 f12" href="javascript:;">民谣</a>
+                        <span class="line">|</span>
+                        <a class="a_666 f12" href="javascript:;">电子</a>
+                    </div>
+                    <span class="more">更多</span>
+                </div>
+                <!--热门推荐 歌曲列表-->
+                <ul class="rmtj_content">
+                    <li id="rmtj1">
+                        <div class="song_cover">
+                            <img>
+                            <!--半透明容器-->
+                            <div class="buttom">
+                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                    href="javascript:;"></a>
+                                <span class="icon_headset"></span>
+                                <span class="playNumber">666</span>
+
+                            </div>
+                            <p class="dec"> </p>
+                        </div>
+                    </li>
+
+                    <li id="rmtj2">
+                        <div class="song_cover">
+                            <img>
+                            <!--半透明容器-->
+                            <div class="buttom">
+                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                    href="javascript:;"></a>
+                                <span class="icon_headset"></span>
+                                <span class="playNumber">666</span>
+
+                            </div>
+                            <p class="dec"> </p>
+                        </div>
+                    </li>
+
+                    <li id="rmtj3">
+                        <div class="song_cover">
+                            <img>
+                            <!--半透明容器-->
+                            <div class="buttom">
+                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                    href="javascript:;"></a>
+                                <span class="icon_headset"></span>
+                                <span class="playNumber">666</span>
+
+                            </div>
+                            <p class="dec"> </p>
+                        </div>
+                    </li>
+
+
+                    <li id="rmtj4">
+                        <div class="song_cover">
+                            <img>
+                            <!--半透明容器-->
+                            <div class="buttom">
+                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                    href="javascript:;"></a>
+                                <span class="icon_headset"></span>
+                                <span class="playNumber">666</span>
+
+                            </div>
+                            <p class="dec"> </p>
+                        </div>
+                    </li>
+
+                    <li id="rmtj5">
+                        <div class="song_cover">
+                            <img>
+                            <!--半透明容器-->
+                            <div class="buttom">
+                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                    href="javascript:;"></a>
+                                <span class="icon_headset"></span>
+                                <span class="playNumber">666</span>
+
+                            </div>
+                            <p class="dec"> </p>
+                        </div>
+                    </li>
+
+                    <li id="rmtj6">
+                        <div class="song_cover">
+                            <img>
+                            <!--半透明容器-->
+                            <div class="buttom">
+                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                    href="javascript:;"></a>
+                                <span class="icon_headset"></span>
+                                <span class="playNumber">666</span>
+
+                            </div>
+                            <p class="dec"> </p>
+                        </div>
+                    </li>
+
+                    <li id="rmtj7">
+                        <div class="song_cover">
+                            <img>
+                            <!--半透明容器-->
+                            <div class="buttom">
+                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                    href="javascript:;"></a>
+                                <span class="icon_headset"></span>
+                                <span class="playNumber">666</span>
+
+                            </div>
+                            <p class="dec"> </p>
+                        </div>
+                    </li>
+
+                    <li id="rmtj8">
+                        <div class="song_cover">
+                            <img>
+                            <!--半透明容器-->
+                            <div class="buttom">
+                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                    href="javascript:;"></a>
+                                <span class="icon_headset"></span>
+                                <span class="playNumber" id="num">666</span>
+
+                            </div>
+                            <p class="dec"> </p>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <!--榜单-->
+                <div class="hot_video">
+                    <a class="rmtj_title" href="javascipt:;">榜单</a>
+                    <span class="more">更多</span>
+                </div>
+
+                <div class="hotList">
+                    <!--左-->
+                    <div class="subHotList">
+                        <dl>
+                            <dt>
+                                <img
+                                    src="http://p3.music.126.net/pcYHpMkdC69VVvWiynNklA==/109951166952713766.jpg?param=100y100">
+                                <a href="javascript:; " class="subHotMask" title="飙升榜"></a>
+                                <a href="javascript:;" class="sub_title">飙升榜</a>
+                                <a href="javascript:;" class="sub_title2" title="播放">播放</a>
+                                <a href="javascript:;" class="sub_title3" title="收藏">收藏</a>
+                            </dt>
+                            <dd>
+                                <ul class="songHotList" id="List1">
+                                    <li>
+                                        <span class="songHotListSp">1</span>
+                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                        <div class="li_hover">
+                                            <a href="javascript:;" title="播放"></a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp">2</span>
+                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp">3</span>
+                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">4</span>
+                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">5</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">6</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">7</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">8</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">9</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">10</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+                                </ul>
+
+                                <div class="more"><a>查看全部&gt;</a></div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!--中-->
+                    <div class="subHotList">
+                        <dl>
+                            <dt>
+                                <img style="    position: relative;
+                                left: -3px;"
+                                    src="http://p4.music.126.net/wVmyNS6b_0Nn-y6AX8UbpQ==/109951166952686384.jpg?param=100y100">
+                                <a style="    position: relative;
+                                left: -2px;" href="javascript:; " class="subHotMask" title="新歌榜"></a>
+                                <a href="javascript:;" class="sub_title">新歌榜</a>
+                                <a href="javascript:;" class="sub_title2" title="播放">播放</a>
+                                <a href="javascript:;" class="sub_title3" title="收藏">收藏</a>
+                            </dt>
+                            <dd>
+                                <ul class="songHotList" id="List2">
+                                    <li>
+                                        <span class="songHotListSp">1</span>
+                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp">2</span>
+                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp">3</span>
+                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">4</span>
+                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">5</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">6</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">7</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">8</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">9</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">10</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+                                </ul>
+
+                                <div class="more"><a>查看全部&gt;</a></div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!--右-->
+                    <div class="subHotList">
+                        <dl>
+                            <dt>
+                                <img style="  position: relative;left: -3px;"
+                                    src="http://p4.music.126.net/iFZ_nw2V86IFk90dc50kdQ==/109951166961388699.jpg?param=100y100">
+                                <a style="position: relative;left: -2px;" href="javascript:; " class="subHotMask"
+                                    title="原创榜"></a>
+                                <a href="javascript:;" class="sub_title">原创榜</a>
+                                <a href="javascript:;" class="sub_title2" title="播放">播放</a>
+                                <a href="javascript:;" class="sub_title3" title="收藏">收藏</a>
+                            </dt>
+                            <dd>
+                                <ul class="songHotList" id="List3">
+                                    <li>
+                                        <span class="songHotListSp">1</span>
+                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp">2</span>
+                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp">3</span>
+                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">4</span>
+                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">5</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">6</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">7</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">8</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">9</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+
+                                    <li>
+                                        <span class="songHotListSp2">10</span>
+                                        <a href="javascript:;" class="songHotLista"></a>
+                                    </li>
+                                </ul>
+
+                                <div class="more"><a>查看全部&gt;</a></div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <!--榜单结束-->
+            </div>
+
+
+
+            <!--右容器-->
+            <div class="rightWrap"></div>
+
+        </div>
+
+    </div>
+    <!--页面主体结束-->
+
+
+</body>
+</html>
+<script type="text/javascript" src="../script/play.js"></script><!--播放-->
+<script type="text/javascript" src="../script/volume.js"></script><!--音量-->
+<script type="text/javascript" src="../script/login.js"></script><!--登录-->
+<script type="text/javascript" src="../script/rmtj.js"></script><!--热门推荐-->
+<script type="text/javascript" src="../script/rank list.js"></script><!--榜单-->
+<script type="text/javascript" src="../script/slider.js"></script><!--轮播图-->
+<script type="text/javascript" src="../script/search.js"></script><!--搜索-->

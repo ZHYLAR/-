@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>模仿网易云首页</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/utils.css">
+    <link rel="stylesheet" type="text/css" href="./css/login.css">
+    <link rel="stylesheet" type="text/css" href="./css/player.css">
+</head>
+
+<body>
+    <!--播放器-->
+    <audio id="audioInnerPlayer" src="http://music.163.com/song/media/outer/url?id=1983534049.mp3"></audio>
+
+
+
+    <!-- 登陆框主体 -->
+    <div id="login" class="login">
+        <!-- 登陆框标题 -->
+        <div id="login-title" class="login-title">
+            <h5>&nbsp&nbsp手机号登录</h5>
+            <span><a id="closeBtn" href="javascript:;">X</a></span>
+        </div>
+        <!-- 登陆框表单 -->
+        <div id="login-form">
+            <div class="login-input">
+                <input type="text" placeholder="请输入手机号" class="list-input" id="phoneNum" />
+            </div>
+
+            <div class="login-input">
+                <input type="password" placeholder="请输入密码" class="list-input" id="password" />
+            </div>
+        </div>
+        <!-- 登陆框登陆按钮 -->
+        <input type="submit" id="loginSubmit" value="登陆" class="loginSubmit" />
+        <div class="decro"></div>
+    </div>
+    <!-- 遮盖层 -->
+    <div id="bg" class="bg">sada</div>
+
+
+    <div class="m_top">
+        <div class="wrap">
+            <h1 class="h1_logo"></h1>
+            <ul class="navWrap">
+                <li class="z_slt">发现音乐</li>
+                <li>我的音乐</li>
+                <li>关注</li>
+                <li>商城</li>
+                <li>音乐人</li>
+                <li class="pr">下载客户端
+                    <i class="hot"></i>
+                </li>
+            </ul>
+            <!--登录按钮-->
+            <div href="" class="loginBtn" id="adminBtn">
+                <div id="nameHolder">登录</div>
+                <div class="menu" id="menu">
+                    <div class="menu-item">
+
+                        <div class="menu-item-text" id="mainPage">我的主页</div>
+                    </div>
+                    <div class="menu-item">
+
+                        <div class="menu-item-text" id="message">我的消息</div>
+                    </div>
+                    <div class="menu-item">
+
+                        <div class="menu-item-text">我的等级</div>
+                    </div>
+                    <div class="menu-item">
+
+                        <div class="menu-item-text">VIP会员</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-text">个人设置</div>
+                    </div>
+                    <div class="menu-item">
+
+                        <div class="menu-item-text">实名认证</div>
+                    </div>
+                    <div class="menu-item">
+
+                        <div class="menu-item-text" id="exit">退出</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--创作者中心-->
+            <a href="#" class="creator_a">创作者中心</a>
+            <!--搜索框-->
+            <div class="music_serach">
+                <input type='text' class="serachInput" placeholder="音乐/视频/电台/用户">
+                <div class="suggestions">
+                    <div class="suggestion">
+                        <a class="userSearch"></a>
+                    </div>
+                    <img class="searchTitle" src="./image/searchTitle.png">
+                    <div class="split"></div>
+                    <ul></ul>
+                    <ul></ul>
+                    <ul></ul>
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--红色导航-->
+    <div class="subNavWrap">
+        <div class="wrap">
+            <ul>
+                <!--emBg表示选中-->
+                <li>
+                    <em class="emBg">推荐</em>
+                </li>
+                <li>
+                    <em>排行榜</em>
+                </li>
+                <li>
+                    <em>歌单</em>
+                </li>
+                <li>
+                    <em>主播电台</em>
+                </li>
+                <li>
+                    <em>歌手</em>
+                </li>
+                <li>
+                    <em>新碟上架</em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--导航栏结束-->
+<iframe src="./html/index-main part.html" style="height: 1800px; width: 100%;"></iframe>
+
+
+    <!--播放-->
+    <div class="playerBar">
+        <div class="wrap">
+            <!--按钮-->
+            <div class="playBtns">
+                <a class="prev" href="javascript:;" title="上一首"></a>
+                <a class="play" href="javascript:;" title="播放/暂停"></a>
+                <a class="next" href="javascript:;" title="下一首"></a>
+            </div>
+
+            <!--歌曲图片-->
+            <div class="songHead">
+                <img id="songCoverImg" src='https://p1.music.126.net/cu9T_JCh5mt3aipWJoy03w==/109951167767293721.jpg?param=34y34'>
+            </div>
+
+            <!--进度条-->
+            <div class="playWrap">
+                <div class="playInfo">
+                    <a id="playingSongName" class="ellipsis songName" href="javascript:;" title="TruE">TruE</a>
+                    <a id="playingSongSinger" class="fl singer ellipsis" href="javascript:;" title="黄龄">黄龄</a>
+                </div>
+                <!--进度条-->
+                <div class="progressBar">
+                    <div class="cur" style="width: 0%;">
+                        <span class="btn"></span>
+                    </div>
+                    <div lang="barBg"></div>
+                </div>
+                <div class="playTime">
+                    <em id="Current_duration">00:00</em>
+                    <div id="Total_song_duration" style="position: relative;left: 30px; bottom: 12px;">/03:11</div>
+                </div>
+
+                <!--收藏-->
+                <div class="optionWrap">
+                    <a class="add" href="javascript:;" title="收藏">&nbsp;&nbsp;</a>
+                    <a class="collection" href="javascript:;" title="分享">分享</a>
+                </div>
+
+                <div class="setting">
+                    <!--音量-->
+                    <a class="volume"></a>
+                    <!--音量调整-->
+                    <div class="volumeWrap">
+                        <div class="barBg"></div>
+                        <div class="soundBg">
+                            <div class="currentVolume"></div>
+                            <div class="btnVolume"></div>
+                        </div>
+                    </div>
+
+                    <!--循环-->
+                    <a class="loop"></a>
+
+                    <!--播放列表-->
+                    <a class="song_list"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>   
+
+
+</body>
+<!--需要播放音乐功能的代码应放到播放脚本的后面，传入歌曲时长-->
+<script type="text/javascript" src="./script/play.js"></script><!--播放-->
+<script type="text/javascript" src="./script/volume.js"></script><!--音量-->
+<script type="text/javascript" src="./script/login.js"></script><!--登录-->
+<script type="text/javascript" src="./script/rmtj.js"></script><!--热门推荐-->
+<script type="text/javascript" src="./script/rank list.js"></script><!--榜单-->
+<script type="text/javascript" src="./script/slider.js"></script><!--轮播图-->
+<script type="text/javascript" src="./script/search.js"></script><!--搜索-->
+
+
+
+</html>

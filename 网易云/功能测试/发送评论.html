@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+     fetch("http://localhost:3000/captcha/sent?phone=13316259927")
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+    })
+    
+    /*
+    fetch("http://localhost:3000/comment?t=1&type=2&id=7196179822&content=发评论发评论")
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })*/
+    
+</script>

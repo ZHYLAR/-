@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //精品歌单标签列表
+
+    
+        fetch("http://localhost:3000/recommend/resource?cookie=MUSIC_A_T=1493373544636; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/neapi/feedback;;MUSIC_U=00AE0B16267E19CAD66E8BA8608BD276582F0C09AF254EAC94EBFE0107C261CE1D8F6C6B1A9C8D03D2213054B2F8DDD88F870D9608AD4F3E8D168A911B9D96B0949F5748225B6D5802AEC8DCE3084F3B5840BE6C0F0E0406E4F3F5A1C40DD872FF6E5CCE032F2492B540EE48385F3CB0207565A68A825AB588E07C36099AB50AFF7C306C0370B28C5BD2B381C57586B9D34D8CA8D0DE10033FEA89D2AB748FEB9010982A191F6DE4E0CBF9566AB5F8973E001D92C2594052AE8CEED75FC9418788896449ECA95732BC03710EBC1F6CFB336C7437AEE090ACCB0FDC24CE61EAE36853BB4B1ED39BD7978525B4EBB8D4B2213F58896A225CEBB22A8C4CDF1BF703F993BB6DB14B42903834D900F2FAAD227776D5A5027B8AA4856D43D535A9336971938B47A84C21296F50644DE604D50FCA0C4525AAE27F5E59DA3FB0A7235E4725; Max-Age=1296000; Expires=Thu, 26 Jan 2023 15:23:27 GMT; Path=/;;MUSIC_A_T=1493373544636; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/eapi/feedback;;MUSIC_R_T=1493373731535; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/openapi/clientlog;;MUSIC_A_T=1493373544636; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/neapi/clientlog;;__csrf=0512711b6a111a396b30b631744c63cc; Max-Age=1296010; Expires=Thu, 26 Jan 2023 15:23:37 GMT; Path=/;;MUSIC_R_T=1493373731535; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/eapi/feedback;;MUSIC_R_T=1493373731535; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/wapi/feedback;;MUSIC_R_T=1493373731535; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/eapi/clientlog;;MUSIC_A_T=1493373544636; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/api/clientlog;;MUSIC_R_T=1493373731535; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/api/feedback;;MUSIC_R_T=1493373731535; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/weapi/feedback;;MUSIC_A_T=1493373544636; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/wapi/clientlog;;MUSIC_A_T=1493373544636; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/weapi/feedback;;MUSIC_R_T=1493373731535; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/neapi/feedback;;MUSIC_R_T=1493373731535; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/api/clientlog;;MUSIC_A_T=1493373544636; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/api/feedback;;__remember_me=true; Max-Age=1296000; Expires=Thu, 26 Jan 2023 15:23:27 GMT; Path=/;;MUSIC_A_T=1493373544636; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/wapi/feedback;;MUSIC_SNS=; Max-Age=0; Expires=Wed, 11 Jan 2023 15:23:27 GMT; Path=/;MUSIC_A_T=1493373544636; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/eapi/clientlog;;MUSIC_A_T=1493373544636; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/openapi/clientlog;;MUSIC_R_T=1493373731535; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/wapi/clientlog;;MUSIC_A_T=1493373544636; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/weapi/clientlog;;MUSIC_R_T=1493373731535; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/neapi/clientlog;;MUSIC_R_T=1493373731535; Max-Age=2147483647; Expires=Mon, 29 Jan 2091 18:37:34 GMT; Path=/weapi/clientlog;")
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+    
+
+            fetch("http://localhost:3000/playlist/catlist")
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+
+            fetch("http://localhost:3000/top/playlist/highquality?cat=古风")
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+</script>

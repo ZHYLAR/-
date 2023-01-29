@@ -1,0 +1,56 @@
+.detailsOfSong{
+    width: 980px;
+    min-height: 700px;
+    height: 4000px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-width: 0 1px;
+}
+
+.song_msk{
+    position: absolute;
+    width: 206px;
+    height: 205px;
+    top: -4px;
+    left: -4px;
+    background-position: -140px -580px;
+    background-image: url('https://s2.music.126.net/style/web2/img/coverall.png?eb6f9099e509ad142b3c5f0fdd7a8af5');
+}
+
+.lyric_div{
+    position: relative;
+    top: 20px;
+}
+
+.songRemarks{
+    position: relative;
+    top: 100px;
+    left: 135px;
+    width: 640px;
+    height: 1000px;
+}
+
+.songRemarks .remarkArea{
+    position: relative;
+    left: 15px;
+    top: 20px;
+    width: 550px;
+    height: 55px;
+}
+
+.songRemarks .songCommentsStart{
+    margin-top: 80px;
+}
+
+
+.songRemarks .commentSubmitBtn{
+position: relative;
+left: 583px;
+top: 30px;
+width: 46px;
+height: 25px;
+background-image: url(https://s2.music.126.net/style/web2/img/button.png?454f37f…);
+color: white;
+background-position: -84px -64px;
+border: none;}

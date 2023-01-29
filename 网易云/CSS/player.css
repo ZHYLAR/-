@@ -1,0 +1,358 @@
+.playerBar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1002;
+    width: 100%;
+    height: 53px;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-image: url('https://s2.music.126.net/style/web2/img/frame/playbar.png?6e657cc32de722c1201d58d7cd4ea3e3');
+}
+
+.playerBar .wrap {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 980px;
+    height: 47px;
+    margin-left: -490px;
+}
+
+.playBtns {
+    float: left;
+    width: 137px;
+    padding: 12px 0 0 0;
+}
+
+.playBtns a {
+    float: left;
+    width: 28px;
+    height: 28px;
+    margin: 5px 8px 0 0;
+    background-image: url('https://s2.music.126.net/style/web2/img/frame/playbar.png?6e657cc32de722c1201d58d7cd4ea3e3');
+    background-repeat: repeat-x;
+    background-position: 0 0;
+}
+
+.playBtns a.prev {
+    background-position: 0 -130px;
+}
+
+.playBtns a.prev:hover {
+    background-position: -30px -130px;
+}
+
+.playBtns a.play {
+    width: 36px;
+    height: 36px;
+    margin-top: 0;
+    background-position: 0 -204px;
+}
+
+.playBtns a.play:hover {
+    background-position: -40px -204px;
+}
+
+.playBtns a.next:hover {
+    background-position: -110px -130px;
+}
+
+.playBtns a.next {
+    background-position: -80px -130px;
+}
+
+div.songHead {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    margin: 6px 15px 0 0;
+    left: 130px;
+    bottom: 2px;
+}
+
+div.songHead img {
+    width: 34px;
+    height: 34px;
+}
+
+div.songHead a.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('https://s2.music.126.net/style/web2/img/frame/playbar.png?6e657cc32de722c1201d58d7cd4ea3e3');
+    background-repeat: repeat-x;
+    background-position: 0 -80px;
+}
+
+div.playWrap {
+    width: 581px;
+    float: left;
+}
+
+.playInfo {
+    height: 28px;
+    overflow: hidden;
+    color: #e8e8e8;
+    text-shadow: 0 1px 0 #171717;
+    line-height: 28px;
+}
+
+a.icon_play:hover {
+    background-position: 0 -60px;
+}
+
+
+.playInfo a.songName {
+    width: 50px;
+    position: absolute;
+    left: 180px;
+    bottom: 16px;
+    color: #e8e8e8;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    display: block;
+    /*超出隐藏*/
+    overflow: hidden;
+    /*禁止换行*/
+    white-space: nowrap;
+    /*超出用省略号代替*/
+    text-overflow: ellipsis;
+}
+
+.playInfo a.singer {
+    display: block;
+    width: 50px;
+    margin-left: 25px;
+    color: #9b9b9b;
+    font-size: 12px;
+    position: absolute;
+    left: 200px;
+    bottom: 16px;
+    text-overflow: ellipsis;
+    display: block;
+    /*超出隐藏*/
+    overflow: hidden;
+    /*禁止换行*/
+    white-space: nowrap;
+    /*超出用省略号代替*/
+    text-overflow: ellipsis;
+}
+
+a.playInfo a.songSrc {
+    float: left;
+    width: 14px;
+    height: 15px;
+    margin: 7px 0 0 13px;
+    background-image: url('https://s2.music.126.net/style/web2/img/frame/playbar.png?6e657cc32de722c1201d58d7cd4ea3e3');
+    background-repeat: repeat-x;
+    background-position: -110px -103px;
+
+}
+
+div.progressBar {
+    bottom: 5px;
+    left: 180px;
+    width: 494px;
+    position: absolute;
+    height: 9px;
+    background-image: url('https://s2.music.126.net/style/web2/img/frame/statbar.png?24934f98b5a4e3e0273c2c876b629a15');
+    background-repeat: repeat-x;
+    background-position: right 0;
+}
+
+.cur {
+    height: 9px;
+    position: absolute;
+    background-image: url('https://s2.music.126.net/style/web2/img/frame/statbar.png?24934f98b5a4e3e0273c2c876b629a15');
+    background-repeat: repeat-x;
+    background-position: left -66px;
+}
+
+div.cur span.btn {
+    position: absolute;
+    z-index: 10;
+    top: -7px;
+    right: -13px;
+    width: 22px;
+    height: 24px;
+    background-image: url('https://s2.music.126.net/style/web2/img/iconall.png?6034407f2100527fb349b7e4ed998a82');
+    background-position: 0 1015px;
+}
+
+div.cur span.btn:hover {
+    background-position: 0 985px;
+}
+
+.playTime {
+    position: relative;
+    top: 3px;
+    right: -548px;
+    color: #797979;
+    text-shadow: 0 1px 0 #121212;
+    font-size: 12px;
+}
+
+.playTime em {
+    color: #a1a1a1;
+}
+
+div.optionWrap {
+    position: absolute;
+    left: 773px;
+    bottom: 10px;
+    width: 60px;
+    font-size: 12px;
+}
+
+div.optionWrap a.add {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: -20px;
+    bottom: -6px;
+    margin: 11px 10px 0 0;
+    text-indent: -9999px;
+    background-image: url('https://s2.music.126.net/style/web2/img/frame/playbar.png?6e657cc32de722c1201d58d7cd4ea3e3');
+    background-position: -89px -165px;
+    background-repeat: repeat-x;
+}
+
+div.optionWrap a.add:hover {
+    background-position: -89px -191px;
+}
+
+div.optionWrap a.collection {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: 10px;
+    bottom: -6px;
+    margin: 11px 10px 0 0;
+    text-indent: -9999px;
+    background-image: url('https://s2.music.126.net/style/web2/img/frame/playbar.png?6e657cc32de722c1201d58d7cd4ea3e3');
+    background-position: -115px -165px;
+    background-repeat: repeat-x;
+}
+
+div.optionWrap a.collection:hover {
+    background-position: -115px -191px;
+}
+
+.setting{
+    position: absolute;
+    right: 55px;
+    bottom: 5px;
+    width: 113px;
+    height: 25px;
+}
+
+div.setting a.volume {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 25px;
+    height: 25px;
+    margin: 11px 2px 0 0;
+    background-position: -2px -248px;
+    background-image: url('https://s2.music.126.net/style/web2/img/frame/playbar.png?6e657cc32de722c1201d58d7cd4ea3e3');
+}
+
+div.setting a.volume:hover{
+    background-position: -31px -248px;
+}
+
+div.setting a.loop {
+    position: absolute;
+    left: 30px;
+    bottom: 0px;
+    width: 25px;
+    height: 25px;
+    margin: 11px 2px 0 0;
+    background-position: -2px -345px;
+    background-image: url('https://s2.music.126.net/style/web2/img/frame/playbar.png?6e657cc32de722c1201d58d7cd4ea3e3');
+}
+
+div.setting a.loop:hover{
+    background-position: -31px -345px;
+}
+
+div.setting a.song_list{
+    position:absolute;
+    left: 60px;
+    padding-left: 21px;
+    width: 38px;
+    height: 25px;
+    background-image: url('https://s2.music.126.net/style/web2/img/frame/playbar.png?6e657cc32de722c1201d58d7cd4ea3e3');
+    background-position: -42px -68px;
+}
+
+div.setting a.song_list:hover{
+    background-position: -42px -98px;
+}
+
+/*音量调整*/
+div.volumeWrap{
+    display: none;
+    position: absolute;
+    top: -114px;
+    left: -2px;
+    clear: both;
+    width: 32px;
+    height: 113px;
+}
+
+div.volumeWrap div.barBg{
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 32px;
+    height: 113px;
+    background:#000;
+    opacity: .8;
+    z-index: 2;
+}
+
+div.volumeWrap div.soundBg{
+    position: absolute;
+    top: -5px;
+    left: 14px;
+    width: 4px;
+    height: 93px;
+    padding: 4px 0;
+    background: #000;
+    opacity: .9  ;
+    z-index: 22;
+}
+
+div.currentVolume{
+    position: absolute;
+    bottom: 0px;
+    top: 10px;
+    left: 0;
+    overflow: hidden;
+    width: 4px;
+    background-color:rgb(199, 12, 12);
+}
+
+div.btnVolume{
+    position: absolute;
+    left: -7px;
+    width: 38px;
+    height: 30px;
+    cursor: pointer;
+    background-position: -40px -250px;
+    background-image: url('https://s2.music.126.net/style/web2/img/iconall.png?6034407f2100527fb349b7e4ed998a82');
+}
+
+
+div.btnVolume:hover{
+    background-position: -40px -280px;
+}
+
+.audio{
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    width: 60px;
+}

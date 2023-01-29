@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>自定义登陆窗口</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* 弹出登陆框按钮 */
+        #login-header {
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        #login-header a {
+            font-size: 24px;
+            text-decoration: none;
+            color: black;
+        }
+
+        /* 登陆框主体 */
+        .login {
+            position: absolute;
+            width: 530px;
+            height: 336px;
+            z-index: 9999;
+            display: none;
+            background-color: white;
+            /* 这里要注意绝对定位的盒子怎么在屏幕显示居中 */
+            left: 50%;
+            margin-left: -256px;
+            margin-top: 142px;
+            border: 1px solid gray;
+        }
+
+        /* 登陆框标题 */
+        .login-title {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            text-align: left;
+            margin-bottom: 20px;
+            cursor: move;
+            color: white;
+            background-color: rgb(45, 45, 45);
+        }
+
+        .login-title span a {
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(136, 136, 136);
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0px;
+            right: -20px;
+        }
+
+        /* 登陆表单 */
+        .login-input {
+            margin: -4px 0px 8px 0px;
+            
+            position: relative;
+            top: 50%;
+            left: 21.5%;
+        }
+
+        .login-input label {
+            float: center;
+            height: 35px;
+            line-height: 35px;
+            width: 90px;
+            padding-left: 10px;
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .login-input input.list-input {
+            height: 38px;
+            line-height: 35px;
+            width: 273px;
+            text-indent: 5px;
+            border:1px solid #d2d2d2;
+        }
+
+        /* 登陆框登陆按钮 */
+        .loginSubmit {
+            width: 250px;
+            height: 30px;
+            text-align: center;
+            background-position: 0 -387px;
+            background-image: url(https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/9647896553/4adc/4002/52e9/30a1d480dd30d8de52b23af576be8c48.png);
+            background-repeat: no-repeat;
+            margin-left: 120px;
+            border: none;
+            margin-top: 12px;
+        }
+
+        .loginSubmit:hover {
+            width: 250px;
+            height: 30px;
+            text-align: center;
+            background-position: 0 -469px;
+            background-image: url(https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/9647896553/4adc/4002/52e9/30a1d480dd30d8de52b23af576be8c48.png);
+            background-repeat: no-repeat;
+            margin-left: 120px;
+            border: none;
+            margin-top: 12px;
+        }
+
+        .YJ {
+            margin-left: 120px;
+            background-position: right -428px;
+            background: url(https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/9647896553/4adc/4002/52e9/30a1d480dd30d8de52b23af576be8c48.png) no-repeat 0 9999px;
+        }
+
+        /* 遮盖层 */
+        .bg {
+            background-color: #000;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            position: fixed;
+            opacity: 0.3;
+            -webkit-opacity: 0.3;
+            -moz-opacity: 0.3;
+            display: none;
+        }
+
+        /*下方装饰框*/
+        .decro{
+            background-color: rgb(247, 247, 247);
+            width: 529px;
+            height: 48px;
+            position:relative;
+            top: 99px;
+            border:1px solid rgb(198, 198, 198);   
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 弹出登陆框按钮 -->
+    <div id="login-header">
+        <a id="adminBtn" href="javascript:void(0)">登陆框</a>
+    </div>
+
+    <!-- 登陆框主体 -->
+    <div id="login" class="login">
+        <!-- 登陆框标题 -->
+        <div id="login-title" class="login-title">
+            <h5>&nbsp&nbsp手机号登录</h5>
+            <span><a id="closeBtn" href="javascript:void(0)">X</a></span>
+        </div>
+        <!-- 登陆框表单 -->
+        <div id="login-form">
+            <div class="login-input">
+                <input type="text" placeholder="请输入手机号" class="list-input" />
+            </div>
+
+            <div class="login-input">
+                <input type="password" placeholder="请输入密码" class="list-input" />
+            </div>
+        </div>
+        <!-- 登陆框登陆按钮 -->
+        <input  type="submit" id="loginSubmit" value="登陆" class="loginSubmit" />
+        <div class="decro"></div>
+    </div>
+    
+
+    <!-- 遮盖层 -->
+    <div id="bg" class="bg">sada</div>
+
+
+    <!-- 插入JS代码 -->
+    <script type="text/javascript">
+        var login = document.getElementById('login');
+        var bg = document.getElementById('bg');
+        // 1.点击"点击，弹出登陆框",弹出登陆窗口和遮盖层
+        var adminBtn = document.getElementById('adminBtn');
+        adminBtn.onclick = function () {
+            login.style.display = "block";
+            bg.style.display = "block";
+            return false;
+        }
+        // 2.点击"关闭",隐藏登陆窗口和遮盖层
+        var closeBtn = document.getElementById('closeBtn');
+        closeBtn.onclick = function () {
+            login.style.display = "none";
+            bg.style.display = "none";
+            return false;
+        }
+           /* // 3.鼠标拖拽功能
+      var login_title=document.getElementById('login-title');
+      login_title.onmousedown=function(e){
+          e = e || window.event;
+          var x=e.pageX || e.clientX +(document.body.scrollLeft || document.documentElement.scrollLeft);
+          var y=e.pageY || e.clientY +(document.body.scrollTop || document.documentElement.scrollTop);
+
+          var boxX=login.offsetLeft;
+          var boxY=login.offsetTop;
+
+          var mouse_in_boxX=x-boxX;
+          var mouse_in_boxY=y-boxY;
+
+          document.onmousemove=function(e){
+              var x=e.pageX || e.clientX +(document.body.scrollLeft || document.documentElement.scrollLeft);
+              var y=e.pageY || e.clientY +(document.body.scrollTop || document.documentElement.scrollTop);
+
+              login.style.left=x-mouse_in_boxX+256+'px';
+              login.style.top=y-mouse_in_boxY-142+'px';
+          }
+      }
+
+      login_title.onmouseup = function(){
+          document.onmousemove=null;
+      }
+*/
+
+
+    </script>
+
+    <div class="m_top">
+        <div class="wrap">
+            <h1 class="h1_logo"></h1>
+            <ul class="navWrap">
+                <li class="z_slt">发现音乐</li>
+                <li>我的音乐</li>
+                <li>关注</li>
+                <li>商城</li>
+                <li>音乐人</li>
+                <li class="pr">下载客户端
+                    <i class="hot"></i>
+                </li>
+            </ul>
+            <!--登录按钮-->
+            <div href="" class="loginBtn">登录</div>
+            <!--创作者中心-->
+            <a href="#" class="creator_a">创作者中心</a>
+            <!--搜索框-->
+            <div class="music_serach">
+                <input type='text' class="serachInput" placeholder="音乐/视频/电台/用户">
+
+            </div>
+        </div>
+    </div>
+
+    <!--红色导航-->
+    <div class="subNavWrap">
+        <div class="wrap">
+            <ul>
+                <!--emBg表示选中-->
+                <li>
+                    <em class="emBg">推荐</em>
+                </li>
+                <li>
+                    <em>排行榜</em>
+                </li>
+                <li>
+                    <em>歌单</em>
+                </li>
+                <li>
+                    <em>主播电台</em>
+                </li>
+                <li>
+                    <em>歌手</em>
+                </li>
+                <li>
+                    <em>新碟上架</em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--导航栏结束-->
+
+    <!--轮播图--><!--测试图src="./image/lbt-rite.png"-->
+    <div class="sliderWrap" id='slider_wrap_id'>
+        <div class="wrap" class="showDiv"><img id="current_slider">
+            <!--下载客户端-->
+            <div class="download_app">
+                <a href="javascript:;" class="downBtn"></a>
+                <!--下载框两边的阴影-->
+                <span class="shadow"></span>
+                <span class="shadowr"></span>
+            </div>
+            <!--轮播图下面的小点-->
+            <div class="slider_Dots" id="dots">
+                <a href="javascript:;" id="dot1"></a>
+                <a href="javascript:;" id="dot2"></a>
+                <a href="javascript:;" id="dot3"></a>
+                <a href="javascript:;" id="dot4"></a>
+                <a href="javascript:;" id="dot5"></a>
+                <a href="javascript:;" id="dot6"></a>
+                <a href="javascript:;" id="dot7"></a>
+                <a href="javascript:;" id="dot8"></a>
+            </div>
+
+            <!--左右按钮-->
+            <a href="javascript:;" class="leftBtn" id="leftBtnId"></a>
+            <a href="javascript:;" class="rightBtn" id="rightBtnId"></a>
+        </div>
+    </div>
+
+
+    <!--页面主体-->
+    <div class="mainWrap">
+        <!--中间部分-->
+        <div class="middleWrap">
+            <!--左容器-->
+            <div class="leftWrap">
+                <!--热门推荐-->
+                <div class="hot_video">
+                    <a href="javascript:;" class="rmtj_title">热门推荐</a>
+                    <div class="rmtj_tabBtn">
+                        <a class="a_666 f12" href="javascript:;">华语</a>
+                        <span class="line">|</span>
+                        <a class="a_666 f12" href="javascript:;">流行</a>
+                        <span class="line">|</span>
+                        <a class="a_666 f12" href="javascript:;">摇滚</a>
+                        <span class="line">|</span>
+                        <a class="a_666 f12" href="javascript:;">民谣</a>
+                        <span class="line">|</span>
+                        <a class="a_666 f12" href="javascript:;">电子</a>
+                    </div>
+                    <span class="more">更多</span>
+                </div>
+                <!--热门推荐 歌曲列表-->
+                <ul class="rmtj_content">
+                    <li>
+                        <div class="song_cover">
+                            <img src="https://i0.hdslb.com/bfs/new_dyn/6291d242de5e86d55fc14fb7aa1a2447401742377.png"
+                                </div>
+                            <p class="dec">测试文本</p>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+
+                </ul>
+
+            </div>
+
+            <!--右容器-->
+            <div class="rightWrap"></div>
+        </div>
+    </div>
+</body>
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+<link rel="stylesheet" type="text/css" href="../css/utils.css">
+
+</html>

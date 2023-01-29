@@ -1,0 +1,86 @@
+.u-title {
+    height: 40px;
+    border-bottom: 2px solid #c20c0c;
+}
+
+
+
+
+.listsSquare {
+    display: block;
+    /*width: 980px;*/
+    height: 800px;
+    margin: 0 auto;
+    border: 1px solid #d3d3d3;
+    border-width: 0 1px;
+}
+
+
+.squareUl li {
+
+    float: left;
+    display: inline-block;
+    width: 140px;
+    height: 188px;
+    overflow: hidden;
+    padding: 40px 0 30px 50px;
+    line-height: 1.4;
+
+}
+
+
+.u_cover {
+    width: 140px;
+    height: 140px;
+    position: relative;
+    display: block;
+    background-color: blue;
+}
+
+.all_h3 {
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+
+}
+
+.u-title h3 {
+    position: relative;
+    left: -705px;
+    top: 8px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.chooseBtn {
+
+    font-size: 12px;
+    font-weight: normal;
+    margin: 2px 0 0 12px;
+    color: #333;
+    background-position: right -100px;
+    border-color: rgb(194, 194, 194);
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+.chooseBtn:hover {
+    border-color: rgb(224, 223, 223);
+}
+
+
+.dec {
+    margin: 8px 0 3px;
+    font-size: 14px;
+}
+
+.dec:hover{
+    text-decoration: underline;
+}
+
+.chooseType{
+    position: relative;
+    top: 0px;
+    left: 50px;
+    width: 800px;
+    height: 280px;
+    border: 2px solid black;
+}

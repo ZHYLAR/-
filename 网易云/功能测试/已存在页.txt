@@ -1,0 +1,5 @@
+recommendPage.style.display = 'none';
+        m_playlist.style.display = 'none';
+        detailsOfSong.style.display = 'none';
+        listsSquare.style.display = 'none';
+        searchResult.style.display = 'block';

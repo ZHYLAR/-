@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--播放器-->
+    <button id="btn"></button>
+    <audio controls src="http://music.163.com/song/media/outer/url?id=2013454822.mp3"></audio>
+</body>
+
+</html>
+<script>
+    var flag = -1;
+    var btn = document.getElementById('btn');
+    var audio = document.querySelector('audio');
+    btn.addEventListener('click', () => {
+        flag++;
+        if (flag % 2) {
+            audio.play();
+        }else{
+            audio.pause();
+        }
+    })
+
+    fetch("http://localhost:3000/search?keywords=如果突然想起我")
+        .then(res => res.json())
+        .then(data => {
+            console.log(data.result.songs);
+            console.log(data.result.songs[1].id);
+            console.log(data.result.songs[1].duration);//时长
+            //data.result.songs[1].artists[3].name
+           
+        })
+
+/*
+        fetch("http://localhost:3000/search/hot/detail")
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        }
+        );
+*/
+
+    /*http://music.163.com/song/media/outer/url?id=2013454822.mp3*/
+</script>

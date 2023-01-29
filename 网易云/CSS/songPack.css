@@ -1,0 +1,564 @@
+/*歌单详情大wrap*/
+.m-playlist {
+    width: 980px;
+    min-height: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-width: 0 1px;
+}
+
+
+/*封面*/
+.list-cover {
+    position: relative;
+    left: 0px;
+    top: 40px;
+
+}
+
+
+.list-cover img {
+    position: relative;
+    left: -650px;
+    top: 0px;
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+/*
+.song-cover-mask{
+    display: block;
+    position: relative;
+    width: 208px;
+    height: 208px;
+    background-position: 0 -1285px;
+    top: 0px;
+    left: 0px;
+    background-image: url('https://s2.music.126.net/style/web2/img/coverall.png?eb6f9099e509ad142b3c5f0fdd7a8af5');
+}
+*/
+/*封面右边的介绍框*/
+.cnt {
+    position: relative;
+    float: right;
+    width: 640px;
+    height: 195px;
+    left: -47px;
+    top: -156px;
+
+
+}
+
+/*歌单标题框*/
+list-title. {
+    position: relative;
+    margin: 0 0 12px;
+    line-height: 24px;
+}
+
+
+/*歌单图标*/
+.list-icon {
+    width: 54px;
+    height: 24px;
+    background-position: 0 -243px;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    background-image: url('https://s2.music.126.net/style/web2/img/icon.png?71af4b6162cdfa314f32d77612207fa9');
+}
+
+/*文字外框*/
+.tit {
+    margin-left: 64px;
+    position: relative;
+    top: -23px;
+    left: 10px;
+}
+
+/*文字部分*/
+.tit-listName {
+    line-height: 24px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+
+.creator {
+    position: relative;
+    top: -20px;
+    left: 0px;
+    width: 410px;
+    height: 35px;
+
+}
+
+
+.creatorName {
+    font-size: 10px;
+    position: relative;
+    top: -12px;
+    left: 5px;
+}
+
+
+.content-operation {
+    position: relative;
+    top: -5px;
+    left: 0px;
+    width: 410px;
+    height: 35px;
+    /* background-color: blue;*/
+}
+
+.right-Btnicon {
+
+    height: 35px;
+    background-image: url('https://s2.music.126.net/style/web2/img/button2.png?dc8dfae0f130e77305ba970da283cbde');
+    background-repeat: no-repeat;
+    background-position: right -1020px;
+}
+
+.op-playBtn {
+    float: left;
+    display: block;
+    width: 90px;
+    height: 31px;
+    background-image: url(../image/btn.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.op-playBtn:hover {
+    background-image: url(../image/btn-light.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.op-addBtn {
+    float: left;
+    margin-left: 10px;
+    display: block;
+    width: 70px;
+    height: 31px;
+    background-image: url('https://s2.music.126.net/style/web2/img/button2.png?dc8dfae0f130e77305ba970da283cbde');
+    background-position: 0 -977px;
+    background-repeat: no-repeat;
+
+}
+
+.op-addBtn:hover {
+    background-position: 0 -1063px;
+}
+
+.add-num {
+    position: relative;
+    left: 25px;
+    top: -25px;
+    font-size: 12px;
+}
+
+.op-retransmission {
+    float: left;
+    margin-left: 10px;
+    display: block;
+    width: 70px;
+    height: 31px;
+    background-image: url('https://s2.music.126.net/style/web2/img/button2.png?dc8dfae0f130e77305ba970da283cbde');
+    background-position: 0 -1225px;
+    background-repeat: no-repeat;
+}
+
+.op-retransmission:hover {
+    background-position: 0 -1268px;
+}
+
+.retransmission-num {
+    position: relative;
+    left: 25px;
+    top: -25px;
+    font-size: 12px;
+}
+
+.op-download {
+    float: left;
+    margin-left: 10px;
+    display: block;
+    width: 70px;
+    height: 31px;
+    background-image: url('../image/download.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.op-download:hover {
+    float: left;
+    margin-left: 10px;
+    display: block;
+    width: 70px;
+    height: 31px;
+    background-image: url('../image/download-light.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.op-comments {
+    float: left;
+    display: block;
+    width: 70px;
+    height: 31px;
+    background-image: url('https://s2.music.126.net/style/web2/img/button2.png?dc8dfae0f130e77305ba970da283cbde');
+    background-position: 0 -1465px;
+    background-repeat: no-repeat;
+}
+
+.op-comments:hover {
+    background-position: 0 -1508px;
+}
+
+.comments-num {
+    position: relative;
+    left: 25px;
+    top: 8px;
+    font-size: 12px;
+}
+
+
+.songtb {
+    position: relative;
+    top: 60px;
+    left: 40px;
+    width: 640px;
+    height: 35px;
+}
+
+
+.tit-listName {
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+h3.gqlb {
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.list-top-title span.trackCount {
+    position: relative;
+    left: 100px;
+    top: -20px;
+    color: #666;
+    font-size: 13px;
+}
+
+.listPlayCount {
+    float: right;
+    position: relative;
+    left: 300px;
+    top: -38px;
+    height: 30px;
+    width: 100px;
+    font-size: 13px;
+}
+
+.listPlayCount .countNum {
+    color: #c20c0c;
+    font-weight: bold;
+}
+
+.song-list-table {
+    position: relative;
+    top: -150px;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    /*多行省略*/
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+    table-layout: fixed;
+
+}
+
+
+.song-list-table th {
+    height: 38px;
+    background-color: #f7f7f7;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    text-align: left;
+    vertical-align: middle !important;
+    font-size: 15px;
+    color: rgb(102, 102, 102);
+}
+
+.song-list-table tbody tr td {
+    /* background-color: #f7f7f7;*/
+    /*超出隐藏*/
+    overflow: hidden;
+    /*禁止换行*/
+    white-space: nowrap;
+    /*超出用省略号代替*/
+    text-overflow: ellipsis;
+}
+
+
+.each-song-index {
+    color: rgb(153, 153, 153);
+    vertical-align: middle !important;
+}
+
+.each-song-album,
+.each-song-singer,
+.each-song-duration,
+.each-song-title {
+    font-size: 10px;
+    height: 30px;
+    vertical-align: middle !important;
+}
+
+.each-song-album:hover,
+.each-song-singer:hover,
+.each-song-duration:hover,
+.each-song-title:hover {
+    text-decoration: underline;
+}
+
+.grayTr {
+    background-color: rgb(247, 247, 247);
+}
+
+.redline {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(194, 11, 13);
+    position: relative;
+    top: 0px;
+}
+
+.oneRemark {
+    position: relative;
+    top: -60px;
+    left: 0;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    margin-top: 40px;
+}
+
+.new-oneRemark{
+    position: relative;
+    top: -60px;
+    left: 0;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    margin-top: 40px;
+}
+
+.songPackRemarks {
+    position: relative;
+    top: 430px;
+    left: 40px;
+    width: 640px;
+    height: 1000px;
+}
+
+.remarkArea {
+    position: relative;
+    left: 60px;
+    top: -117px;
+    width: 550px;
+    height: 55px;
+    max-lines: 3;
+}
+
+.commentSubmitBtn {
+    position: relative;
+    left: 11px;
+    top: -87px;
+    width: 46px;
+    height: 25px;
+    background-image: url('https://s2.music.126.net/style/web2/img/button.png?454f37f8ef0c790b20100beb6f0ef1fb');
+    color: white;
+    background-position: -84px -64px;
+    border: none;
+}
+
+.commentSubmitBtn:hover {
+    background-position: -84px -94px;
+}
+
+.remark-username {
+    position: relative;
+    top: -35px;
+    left: 60px;
+    width: 400px;
+    font-size: 12px;
+    color: #0c73c2;
+}
+
+.new-remark-username {
+    position: relative;
+    top: -35px;
+    left: 60px;
+    width: 400px;
+    font-size: 12px;
+    color: #0c73c2;
+}
+
+.remark-content {
+    position: relative;
+    top: -32px;
+    left: 60px;
+    width: 560px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.new-remark-content {
+    position: relative;
+    top: -32px;
+    left: 60px;
+    width: 560px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.remark-like {
+    display: block;
+    position: relative;
+    top: 18px;
+    left: 540px;
+    width: 15px;
+    height: 14px;
+    background-image: url('https://s2.music.126.net/style/web2/img/icon2.png?378721672031ebc87bf446c36edb34fa');
+    background-position: -150px 0;
+    /*点赞后：-176px 0*/
+}
+
+.divStrip{
+    display: block;
+    position: relative;
+    top: 2px;
+    left:563px;
+    width: 15px;
+    color: rgb(204, 204, 204);
+}
+
+.remark-like:hover {
+    background-position: -150px -20px;
+}
+
+.remark-reply {
+    display: block;
+    position: relative;
+    top: -10px;
+    left: 574px;
+    width: 40px;
+    height: 14px;
+    font-size: 12px;
+}
+
+.remark-reply:hover {
+    text-decoration: underline;
+}
+
+/*回复*/
+.comments-reply {
+    position: relative;
+    top: -25px;
+    left: 60px;
+    width: 560px;
+    min-height: 30px;
+    width: 550px;
+    height: auto;
+    
+}
+
+.new-comments-reply {
+    position: relative;
+    top: -25px;
+    left: 60px;
+    width: 560px;
+    min-height: 30px;
+    width: 550px;
+    height: auto;
+}
+
+.reply-userName {
+    position: relative;
+    top: 9px;
+    left: 7px;
+    width: 550px;
+    float: left;
+    font-size: 12px;
+    color: rgb(12, 115, 194);
+    background-color: rgb(244, 244, 244);
+}
+
+.new-reply-userName {
+    position: relative;
+    top: 9px;
+    left: 7px;
+    width: 550px;
+    float: left;
+    font-size: 12px;
+    color: rgb(12, 115, 194);
+    background-color: rgb(244, 244, 244);
+}
+
+.reply-content {
+    display: block;
+    position: relative;
+    top: 9px;
+    left: 7px;
+    float: left;
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    background-color: rgb(244, 244, 244);
+    border: 1px solid rgb(222, 222, 222);
+    border-top: none;
+}
+
+.new-reply-content {
+    display: block;
+    position: relative;
+    top: 9px;
+    left: 7px;
+    float: left;
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    background-color: rgb(244, 244, 244);
+    border: 1px solid rgb(222, 222, 222);
+    border-top: none;
+}
+
+.brief_introduction {
+
+    position: relative;
+    width: 410px;
+    height: 83px;
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    /*line-height: 15px;*/
+
+
+    display: -webkit-box;
+    /*  display: -webkit-box; 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示  */
+    -webkit-box-orient: vertical;
+    /*  -webkit-box-orient 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式  */
+    -webkit-line-clamp: 7;
+    /*  -webkit-line-clamp用来限制在一个块元素显示的文本的行数 */
+    overflow: hidden;
+}

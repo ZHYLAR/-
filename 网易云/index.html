@@ -1,0 +1,3041 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>模仿网易云首页</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/utils.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/player.css">
+    <link rel="stylesheet" type="text/css" href="css/songPack.css">
+    <link rel="stylesheet" type="text/css" href="css/listSquare.css">
+    <link rel="stylesheet" type="text/css" href="css/core_5672dfa6f589362eb4f7c0de9002faa1.css">
+    <link rel="stylesheet" type="text/css" href="css/pt_frame_961cab0b038761e466e29545de8276d5.css">
+    <link rel="stylesheet" type="text/css" href="css/songDetails.css">
+    <link rel="stylesheet" type="text/css" href="css/searchResult.css">
+
+</head>
+
+<body>
+    <a id="i" style="display: none;">0<a>
+            <!--播放器-->
+            <audio id="audioInnerPlayer" src="http://music.163.com/song/media/outer/url?id=1971144922.mp3"></audio>
+
+            <!-- 登陆框主体 -->
+            <div id="login" class="login">
+                <!-- 登陆框标题 -->
+                <div id="login-title" class="login-title">
+                    <h5 style="color: white;">&nbsp&nbsp手机号登录</h5>
+                    <span><a class="closeBtn" id="closeBtn" href="javascript:;">X</a></span>
+                </div>
+                <!-- 登陆框表单 -->
+                <div id="login-form">
+                    <div class="login-input">
+                        <input type="text" placeholder="请输入邮箱" class="list-input" id="phoneNum" />
+                    </div>
+
+                    <div class="login-input">
+                        <input type="password" placeholder="请输入密码" class="list-input" id="password" />
+                    </div>
+                </div>
+                <!-- 登陆框登陆按钮 -->
+                <input type="submit" id="loginSubmit" value="登陆" class="loginSubmit" />
+                <div class="decro"></div>
+            </div>
+            <!-- 遮盖层 -->
+            <div id="bg" class="bg">sada</div>
+
+
+            <div class="m_top">
+                <div class="wrap">
+                    <h1 id="head_logo" class="h1_logo"></h1>
+                    <ul class="navWrap">
+                        <li id="find_music_headBtn" class="z_slt">发现音乐</li>
+                        <li>我的音乐</li>
+                        <li>关注</li>
+                        <li>商城</li>
+                        <li>音乐人</li>
+                        <li class="pr">下载客户端
+                            <i class="hot"></i>
+                        </li>
+                    </ul>
+                    <!--登录按钮-->
+                    <div href="" class="loginBtn" id="adminBtn">
+                        <div style="width: 50px; height: 50px;" id="nameHolder">登录</div>
+                        <div class="menu" id="menu">
+                            <div class="menu-item">
+
+                                <div class="menu-item-text" id="mainPage">我的主页</div>
+                            </div>
+                            <div class="menu-item">
+
+                                <div class="menu-item-text" id="message">我的消息</div>
+                            </div>
+                            <div class="menu-item">
+
+                                <div class="menu-item-text">我的等级</div>
+                            </div>
+                            <div class="menu-item">
+
+                                <div class="menu-item-text">VIP会员</div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-text">个人设置</div>
+                            </div>
+                            <div class="menu-item">
+
+                                <div class="menu-item-text">实名认证</div>
+                            </div>
+                            <div class="menu-item">
+
+                                <div class="menu-item-text" id="exit">退出</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--创作者中心-->
+                    <a href="#" class="creator_a">创作者中心</a>
+                    <!--搜索框-->
+                    <div class="music_serach">
+                        <input type='text' class="serachInput" placeholder="音乐/视频/电台/用户">
+                        <div class="suggestions">
+                            <div class="suggestion">
+                                <a class="userSearch"></a>
+                            </div>
+                            <img class="searchTitle" src="./image/searchTitle.png">
+                            <div class="split"></div>
+                            <ul></ul>
+                            <ul></ul>
+                            <ul></ul>
+                            <ul></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--发现音乐主页-->
+            <div id="discoverMusicPage">
+                <!--红色导航-->
+                <div class="subNavWrap">
+                    <div class="wrap">
+                        <ul>
+                            <!--emBg表示选中-->
+                            <li>
+                                <em id="recommend_pageSwitch_Btn">推荐</em>
+                            </li>
+                            <li>
+                                <em>排行榜</em>
+                            </li>
+                            <li>
+                                <em id="lists_pageSwitch_Btn">歌单</em>
+                            </li>
+                            <li>
+                                <em>主播电台</em>
+                            </li>
+                            <li>
+                                <em>歌手</em>
+                            </li>
+                            <li>
+                                <em>新碟上架</em>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--导航栏结束-->
+
+                <!--推荐页面 折叠-->
+                <div id="recommendPage" style="display:block;">
+                    <!--轮播图-->
+                    <div class="sliderWrap" id='slider_wrap_id'>
+                        <div class="wrap" class="showDiv"><img id="current_slider">
+                            <!--下载客户端-->
+                            <div class="download_app">
+                                <a href="javascript:;" class="downBtn"></a>
+                                <!--下载框两边的阴影-->
+                                <span class="shadow"></span>
+                                <span class="shadowr"></span>
+                            </div>
+                            <!--轮播图下面的小点-->
+                            <div class="slider_Dots" id="dots">
+                                <a href="javascript:;" id="dot1"></a>
+                                <a href="javascript:;" id="dot2"></a>
+                                <a href="javascript:;" id="dot3"></a>
+                                <a href="javascript:;" id="dot4"></a>
+                                <a href="javascript:;" id="dot5"></a>
+                                <a href="javascript:;" id="dot6"></a>
+                                <a href="javascript:;" id="dot7"></a>
+                                <a href="javascript:;" id="dot8"></a>
+                            </div>
+
+                            <!--左右按钮-->
+                            <a href="javascript:;" class="leftBtn" id="leftBtnId"></a>
+                            <a href="javascript:;" class="rightBtn" id="rightBtnId"></a>
+                        </div>
+                    </div>
+
+
+                    <!--页面主体-->
+                    <div class="mainWrap">
+                        <!--中间部分-->
+                        <div class="middleWrap">
+                            <!--左容器-->
+                            <div class="leftWrap">
+                                <!--热门推荐-->
+                                <div class="hot_video">
+                                    <a href="javascript:;" class="rmtj_title">热门推荐</a>
+                                    <div class="rmtj_tabBtn">
+                                        <a class="a_666 f12" href="javascript:;">华语</a>
+                                        <span class="line">|</span>
+                                        <a class="a_666 f12" href="javascript:;">流行</a>
+                                        <span class="line">|</span>
+                                        <a class="a_666 f12" href="javascript:;">摇滚</a>
+                                        <span class="line">|</span>
+                                        <a class="a_666 f12" href="javascript:;">民谣</a>
+                                        <span class="line">|</span>
+                                        <a class="a_666 f12" href="javascript:;">电子</a>
+                                    </div>
+                                    <span class="more">更多</span>
+                                </div>
+                                <!--热门推荐 歌曲列表-->
+                                <ul class="rmtj_content">
+                                    <li id="rmtj1">
+                                        <div class="song_cover">
+                                            <img>
+                                            <!--半透明容器-->
+                                            <div class="buttom">
+                                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                                    href="javascript:;"></a>
+                                                <span class="icon_headset"></span>
+                                                <span class="playNumber">666</span>
+
+                                            </div>
+                                            <p class="dec"> </p>
+                                        </div>
+                                    </li>
+
+                                    <li id="rmtj2">
+                                        <div class="song_cover">
+                                            <img>
+                                            <!--半透明容器-->
+                                            <div class="buttom">
+                                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                                    href="javascript:;"></a>
+                                                <span class="icon_headset"></span>
+                                                <span class="playNumber">666</span>
+
+                                            </div>
+                                            <p class="dec"> </p>
+                                        </div>
+                                    </li>
+
+                                    <li id="rmtj3">
+                                        <div class="song_cover">
+                                            <img>
+                                            <!--半透明容器-->
+                                            <div class="buttom">
+                                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                                    href="javascript:;"></a>
+                                                <span class="icon_headset"></span>
+                                                <span class="playNumber">666</span>
+
+                                            </div>
+                                            <p class="dec"> </p>
+                                        </div>
+                                    </li>
+
+
+                                    <li id="rmtj4">
+                                        <div class="song_cover">
+                                            <img>
+                                            <!--半透明容器-->
+                                            <div class="buttom">
+                                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                                    href="javascript:;"></a>
+                                                <span class="icon_headset"></span>
+                                                <span class="playNumber">666</span>
+
+                                            </div>
+                                            <p class="dec"> </p>
+                                        </div>
+                                    </li>
+
+                                    <li id="rmtj5">
+                                        <div class="song_cover">
+                                            <img>
+                                            <!--半透明容器-->
+                                            <div class="buttom">
+                                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                                    href="javascript:;"></a>
+                                                <span class="icon_headset"></span>
+                                                <span class="playNumber">666</span>
+
+                                            </div>
+                                            <p class="dec"> </p>
+                                        </div>
+                                    </li>
+
+                                    <li id="rmtj6">
+                                        <div class="song_cover">
+                                            <img>
+                                            <!--半透明容器-->
+                                            <div class="buttom">
+                                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                                    href="javascript:;"></a>
+                                                <span class="icon_headset"></span>
+                                                <span class="playNumber">666</span>
+
+                                            </div>
+                                            <p class="dec"> </p>
+                                        </div>
+                                    </li>
+
+                                    <li id="rmtj7">
+                                        <div class="song_cover">
+                                            <img>
+                                            <!--半透明容器-->
+                                            <div class="buttom">
+                                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                                    href="javascript:;"></a>
+                                                <span class="icon_headset"></span>
+                                                <span class="playNumber">666</span>
+
+                                            </div>
+                                            <p class="dec"> </p>
+                                        </div>
+                                    </li>
+
+                                    <li id="rmtj8">
+                                        <div class="song_cover">
+                                            <img>
+                                            <!--半透明容器-->
+                                            <div class="buttom">
+                                                <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                                    href="javascript:;"></a>
+                                                <span class="icon_headset"></span>
+                                                <span class="playNumber" id="num">666</span>
+
+                                            </div>
+                                            <p class="dec"> </p>
+                                        </div>
+                                    </li>
+                                </ul>
+
+
+                                <!--榜单-->
+                                <div class="hot_video">
+                                    <a class="rmtj_title" href="javascipt:;">榜单</a>
+                                    <span class="more">更多</span>
+                                </div>
+
+                                <div class="hotList">
+                                    <!--左-->
+                                    <div class="subHotList">
+                                        <dl>
+                                            <dt>
+                                                <img
+                                                    src="http://p3.music.126.net/pcYHpMkdC69VVvWiynNklA==/109951166952713766.jpg?param=100y100">
+                                                <a href="javascript:; " class="subHotMask" title="飙升榜"></a>
+                                                <a href="javascript:;" class="sub_title">飙升榜</a>
+                                                <a href="javascript:;" class="sub_title2" title="播放">播放</a>
+                                                <a href="javascript:;" class="sub_title3" title="收藏">收藏</a>
+                                            </dt>
+                                            <dd>
+                                                <ul class="songHotList" id="List1">
+                                                    <li>
+                                                        <span class="songHotListSp">1</span>
+                                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                                        <div class="li_hover">
+                                                            <a href="javascript:;" title="播放"></a>
+                                                        </div>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp">2</span>
+                                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp">3</span>
+                                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">4</span>
+                                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">5</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">6</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">7</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">8</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">9</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">10</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="more"><a>查看全部&gt;</a></div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <!--中-->
+                                    <div class="subHotList">
+                                        <dl>
+                                            <dt>
+                                                <img style="    position: relative;
+                                left: -3px;" src="http://p4.music.126.net/wVmyNS6b_0Nn-y6AX8UbpQ==/109951166952686384.jpg?param=100y100">
+                                                <a style="    position: relative;
+                                left: -2px;" href="javascript:; " class="subHotMask" title="新歌榜"></a>
+                                                <a href="javascript:;" class="sub_title">新歌榜</a>
+                                                <a href="javascript:;" class="sub_title2" title="播放">播放</a>
+                                                <a href="javascript:;" class="sub_title3" title="收藏">收藏</a>
+                                            </dt>
+                                            <dd>
+                                                <ul class="songHotList" id="List2">
+                                                    <li>
+                                                        <span class="songHotListSp">1</span>
+                                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp">2</span>
+                                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp">3</span>
+                                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">4</span>
+                                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">5</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">6</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">7</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">8</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">9</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">10</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="more"><a>查看全部&gt;</a></div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <!--右-->
+                                    <div class="subHotList">
+                                        <dl>
+                                            <dt>
+                                                <img style="  position: relative;left: -3px;"
+                                                    src="http://p4.music.126.net/iFZ_nw2V86IFk90dc50kdQ==/109951166961388699.jpg?param=100y100">
+                                                <a style="position: relative;left: -2px;" href="javascript:; "
+                                                    class="subHotMask" title="原创榜"></a>
+                                                <a href="javascript:;" class="sub_title">原创榜</a>
+                                                <a href="javascript:;" class="sub_title2" title="播放">播放</a>
+                                                <a href="javascript:;" class="sub_title3" title="收藏">收藏</a>
+                                            </dt>
+                                            <dd>
+                                                <ul class="songHotList" id="List3">
+                                                    <li>
+                                                        <span class="songHotListSp">1</span>
+                                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp">2</span>
+                                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp">3</span>
+                                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">4</span>
+                                                        <a href="javascript:;" class="songHotLista">测试文本</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">5</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">6</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">7</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">8</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">9</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="songHotListSp2">10</span>
+                                                        <a href="javascript:;" class="songHotLista"></a>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="more"><a>查看全部&gt;</a></div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                                <!--榜单结束-->
+                            </div>
+
+
+
+                            <!--右容器-->
+                            <div class="rightWrap"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!--页面主体结束-->
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <!--歌单详情页 折叠-->
+            <div id="m-playlist" class="m-playlist" style="display: none;">
+
+                <!--介绍页-->
+
+                <!--封面-->
+                <div class="list-cover">
+                    <img src="https://p3.music.126.net/ASpnczbjoEE9Y11RjMBoVg==/109951168215072183.jpg?param=200y200">
+                    <span class="song-cover-mask"></span>
+                </div>
+
+                <!--封面右介绍部分-->
+                <div class="cnt">
+                    <div class="list-title">
+                        <i class="list-icon"></i>
+                        <div class="tit">
+                            <h2><span class="tit-listName">[磬弦奏华夜]海灯节限定——2023迎春</span></h2>
+                        </div>
+                    </div>
+                    <div class="creator">
+                        <img style="width:35px ;"
+                            src="https://p3.music.126.net/RHTW2ZsC9bGsqwFPxYNtWQ==/109951163401937144.jpg?param=30y30">
+                        <span class="creatorName">用户名</span>
+                    </div>
+
+                    <!--歌单控件-->
+                    <div class="content-operation">
+                        <a class="op-playBtn"></a>
+                        <a class="op-addBtn">
+                            <div style=" width: 74px;" class="right-Btnicon"></div>
+                            <div class="add-num">（53万）</div>
+                        </a>
+                        <a class="op-retransmission">
+                            <div style="width: 74px;" class="right-Btnicon"></div>
+                            <div class="retransmission-num">（7216）</div>
+                        </a>
+                        <a class="op-download"></a>
+                        <a class="op-comments">
+                            <div style="width: 74px;" class="right-Btnicon">
+                                <div class="comments-num">（2673）</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--简介-->
+                    <div class="brief_introduction">
+
+                    </div>
+                </div>
+
+
+
+                <!--歌曲列表-->
+                <div class="songtb">
+                    <div class="list-top-title">
+                        <h3 class="gqlb">歌曲列表</h3>
+                        <span class="trackCount" id="playlist-track-count">52首歌</span>
+                    </div>
+                    <!--播放数-->
+                    <div class="listPlayCount">播放:<strong id="play-count" class="countNum">95884</strong>次</div>
+
+                    <div class="redline"></div>
+                    <!--歌曲表格-->
+
+                    <table class="song-list-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 90px;">&nbsp;</th>
+                                <th style="width: 250px;">歌曲标题</th>
+                                <th style="width: 100px;">时长</th>
+                                <th style="width: 14%;">歌手</th>
+                                <th>专辑</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--
+                    <tr class="grayTr">
+                        <td class="each-song-index">&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+                        <td class="each-song-title">  The Exquisite Night Chimes 磬弦奏华夜</td>
+                        <td class="each-song-duration">0:00</td>
+                        <td class="each-song-singer">HOYO-Mix</td>
+                        <td class="each-song-album">原神-流星的轨迹 Footprints of the Traveler</td>
+                    </tr>
+-->
+
+
+                            <tr class="grayTr">
+                                <td class="each-song-index">&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+                                <td class="each-song-title"> </td>
+                                <td class="each-song-duration">0:00</td>
+                                <td class="each-song-singer"> </td>
+                                <td class="each-song-album"></td>
+                            </tr>
+
+                            <tr>
+                                <td class="each-song-index">&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+                                <td class="each-song-title"> </td>
+                                <td class="each-song-duration">0:00</td>
+                                <td class="each-song-singer"> </td>
+                                <td class="each-song-album"> </td>
+                            </tr>
+
+                            <tr class="grayTr">
+                                <td class="each-song-index">&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+                                <td class="each-song-title"> </td>
+                                <td class="each-song-duration">0:00</td>
+                                <td class="each-song-singer"> </td>
+                                <td class="each-song-album"> </td>
+                            </tr>
+
+                            <tr>
+                                <td class="each-song-index">&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+                                <td class="each-song-title"> </td>
+                                <td class="each-song-duration">0:00</td>
+                                <td class="each-song-singer"> </td>
+                                <td class="each-song-album"> </td>
+                            </tr>
+
+                            <tr class="grayTr">
+                                <td class="each-song-index">&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+                                <td class="each-song-title"> </td>
+                                <td class="each-song-duration">0:00</td>
+                                <td class="each-song-singer"> </td>
+                                <td class="each-song-album"> </td>
+                            </tr>
+
+                            <tr>
+                                <td class="each-song-index">&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+                                <td class="each-song-title"> </td>
+                                <td class="each-song-duration">0:00</td>
+                                <td class="each-song-singer"> </td>
+                                <td class="each-song-album"> </td>
+                            </tr>
+
+                            <tr class="grayTr">
+                                <td class="each-song-index">&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+                                <td class="each-song-title"> </td>
+                                <td class="each-song-duration">0:00</td>
+                                <td class="each-song-singer"> </td>
+                                <td class="each-song-album"> </td>
+                            </tr>
+
+                            <tr>
+                                <td class="each-song-index">&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+                                <td class="each-song-title"> </td>
+                                <td class="each-song-duration">0:00</td>
+                                <td class="each-song-singer"> </td>
+                                <td class="each-song-album"> </td>
+                            </tr>
+
+                            <tr class="grayTr">
+                                <td class="each-song-index">&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+                                <td class="each-song-title"> </td>
+                                <td class="each-song-duration">0:00</td>
+                                <td class="each-song-singer"> </td>
+                                <td class="each-song-album"> </td>
+                            </tr>
+
+                            <tr>
+                                <td class="each-song-index">&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+                                <td class="each-song-title"> </td>
+                                <td class="each-song-duration">0:00</td>
+                                <td class="each-song-singer"> </td>
+                                <td class="each-song-album"> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--歌曲评论-->
+                <div class="songPackRemarks">
+                    <h3 style="font-size: 20px; margin-left: 10px;">评论</h3>
+                    <div style="height: 10px;"></div>
+                    <div class="redline"></div>
+
+                    <!--发表评论-->
+                    <img style=" width:35px; margin:10px 10px;"
+                        src="https://p3.music.126.net/RHTW2ZsC9bGsqwFPxYNtWQ==/109951163401937144.jpg?param=50y50">
+                    <textarea placeholder="评论" class="remarkArea"></textarea>
+
+                    <button class="commentSubmitBtn">
+                        评论
+                    </button>
+                    <div style="display: none;">
+                        <div style="font-size: 12px;position: relative; width: 600px; top: -85px; left: 10px; ">精彩评论
+                        </div>
+
+                        <div
+                            style="position: relative;left: 10px; top:-76px;width: 600px; height: 1px; background-color: rgb(207, 207, 207);">
+                        </div>
+
+                        <!--单个评论-->
+                        <div class="oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="remark-username"></div>
+                            <div class="remark-content"> </div>
+                            <div class="comments-reply">
+                                <div class="reply-userName"></div>
+                                <div class="reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束--> <!--单个评论-->
+                        <div class="oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="remark-username"></div>
+                            <div class="remark-content"> </div>
+                            <div class="comments-reply">
+                                <div class="reply-userName"></div>
+                                <div class="reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束--> <!--单个评论-->
+                        <div class="oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="remark-username"></div>
+                            <div class="remark-content"> </div>
+                            <div class="comments-reply">
+                                <div class="reply-userName"></div>
+                                <div class="reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+                        <!--单个评论-->
+                        <div class="oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="remark-username"></div>
+                            <div class="remark-content"> </div>
+                            <div class="comments-reply">
+                                <div class="reply-userName"></div>
+                                <div class="reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+                        <!--单个评论-->
+                        <div class="oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="remark-username"></div>
+                            <div class="remark-content"> </div>
+                            <div class="comments-reply">
+                                <div class="reply-userName"> </div>
+                                <div class="reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+                    </div>
+
+                    <!--最新评论-->
+                    <div style="font-size: 12px;position: relative; width: 600px; top: -30px; left: 10px; ">最新评论</div>
+
+                    <div
+                        style="position: relative;left: 10px; top:-25px;width: 600px; height: 1px; background-color: rgb(207, 207, 207);">
+                    </div>
+
+
+                    <!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束-->
+
+                    <!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束-->
+
+
+                    <!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束-->
+
+                    <!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束--><!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束-->
+
+                    <!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束--><!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束-->
+
+                    <!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束--><!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束-->
+
+                    <!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束--><!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束-->
+
+                    <!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束--><!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束-->
+
+                    <!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束--><!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束-->
+
+                    <!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束--><!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束-->
+
+                    <!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束--><!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束-->
+
+                    <!--单个最新评论-->
+                    <div class="new-oneRemark">
+                        <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                        <div class="new-remark-username"></div>
+                        <div class="new-remark-content"></div>
+                        <div class="new-comments-reply">
+                            <div class="new-reply-userName"></div>
+                            <div class="new-reply-content"></div>
+                        </div>
+
+                        <!--按钮控件-->
+                        <div>
+                            <a class="remark-like"></a>
+                            <div class="divStrip">|</div>
+                            <div class="remark-reply">回复</div>
+                        </div>
+                    </div>
+                    <!--单个评论结束-->
+                </div>
+            </div>
+            <!--歌单详情页结束-->
+
+
+
+
+
+
+
+
+            <!--歌单广场 折叠-->
+            <div class="listsSquare" id="listsSquare" style="display: none ;">
+
+                <div class="u-title">
+                    <h3>
+                        <span class="all_h3">全部</span>
+                        <a href="javascript:;" class="chooseBtn">
+                            <i>选择分类</i>
+                        </a>
+                    </h3>
+
+
+                </div>
+
+
+                <div style="display: none;" class="chooseType">
+                    <div class="bd">
+                        <h3><a title=" " class="j-flag u-btn u-btn-g s-fc1" data-cat="全部"><em style="font-size: 20px;"
+                                    title="?">全部</em></a></h3>
+                        <dl class="f-cb">
+                            <dt><i class="u-icn u-icn-71"></i>语种</dt>
+                            <dd>
+                                <a class="s-fc1 " title=" ?cat=%E5%8D%8E%E8%AF%AD" data-cat="华语">华语</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%AC%A7%E7%BE%8E" data-cat="欧美">欧美</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%97%A5%E8%AF%AD" data-cat="日语">日语</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E9%9F%A9%E8%AF%AD" data-cat="韩语">韩语</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E7%B2%A4%E8%AF%AD" data-cat="粤语">粤语</a><span
+                                    class="line">|</span>
+                            </dd>
+                        </dl>
+                        <dl class="f-cb">
+                            <dt><i class="u-icn u-icn-6"></i>风格</dt>
+                            <dd>
+                                <a class="s-fc1 " title=" ?cat=%E6%B5%81%E8%A1%8C" data-cat="流行">流行</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%91%87%E6%BB%9A" data-cat="摇滚">摇滚</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%B0%91%E8%B0%A3" data-cat="民谣">民谣</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E7%94%B5%E5%AD%90" data-cat="电子">电子</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E8%88%9E%E6%9B%B2" data-cat="舞曲">舞曲</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E8%AF%B4%E5%94%B1" data-cat="说唱">说唱</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E8%BD%BB%E9%9F%B3%E4%B9%90" data-cat="轻音乐">轻音乐</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E7%88%B5%E5%A3%AB" data-cat="爵士">爵士</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E4%B9%A1%E6%9D%91" data-cat="乡村">乡村</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=R%26B%2FSoul"
+                                    data-cat="R&amp;B/Soul">R&amp;B/Soul</a><span class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%8F%A4%E5%85%B8" data-cat="古典">古典</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%B0%91%E6%97%8F" data-cat="民族">民族</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E8%8B%B1%E4%BC%A6" data-cat="英伦">英伦</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E9%87%91%E5%B1%9E" data-cat="金属">金属</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%9C%8B%E5%85%8B" data-cat="朋克">朋克</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E8%93%9D%E8%B0%83" data-cat="蓝调">蓝调</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E9%9B%B7%E9%AC%BC" data-cat="雷鬼">雷鬼</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E4%B8%96%E7%95%8C%E9%9F%B3%E4%B9%90"
+                                    data-cat="世界音乐">世界音乐</a><span class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%8B%89%E4%B8%81" data-cat="拉丁">拉丁</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=New%20Age" data-cat="New Age">New
+                                    Age</a><span class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%8F%A4%E9%A3%8E" data-cat="古风">古风</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%90%8E%E6%91%87" data-cat="后摇">后摇</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=Bossa%20Nova" data-cat="Bossa Nova">Bossa Nova</a><span
+                                    class="line">|</span>
+                            </dd>
+                        </dl>
+                        <dl class="f-cb">
+                            <dt><i class="u-icn u-icn-7"></i>场景</dt>
+                            <dd>
+                                <a class="s-fc1 " title=" ?cat=%E6%B8%85%E6%99%A8" data-cat="清晨">清晨</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%A4%9C%E6%99%9A" data-cat="夜晚">夜晚</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%AD%A6%E4%B9%A0" data-cat="学习">学习</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%B7%A5%E4%BD%9C" data-cat="工作">工作</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%8D%88%E4%BC%91" data-cat="午休">午休</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E4%B8%8B%E5%8D%88%E8%8C%B6" data-cat="下午茶">下午茶</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%9C%B0%E9%93%81" data-cat="地铁">地铁</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E9%A9%BE%E8%BD%A6" data-cat="驾车">驾车</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E8%BF%90%E5%8A%A8" data-cat="运动">运动</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%97%85%E8%A1%8C" data-cat="旅行">旅行</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%95%A3%E6%AD%A5" data-cat="散步">散步</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E9%85%92%E5%90%A7" data-cat="酒吧">酒吧</a><span
+                                    class="line">|</span>
+                            </dd>
+                        </dl>
+                        <dl class="f-cb">
+                            <dt><i class="u-icn u-icn-8"></i>情感</dt>
+                            <dd>
+                                <a class="s-fc1 " title=" ?cat=%E6%80%80%E6%97%A7" data-cat="怀旧">怀旧</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%B8%85%E6%96%B0" data-cat="清新">清新</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%B5%AA%E6%BC%AB" data-cat="浪漫">浪漫</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E4%BC%A4%E6%84%9F" data-cat="伤感">伤感</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%B2%BB%E6%84%88" data-cat="治愈">治愈</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%94%BE%E6%9D%BE" data-cat="放松">放松</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%AD%A4%E7%8B%AC" data-cat="孤独">孤独</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%84%9F%E5%8A%A8" data-cat="感动">感动</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%85%B4%E5%A5%8B" data-cat="兴奋">兴奋</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%BF%AB%E4%B9%90" data-cat="快乐">快乐</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%AE%89%E9%9D%99" data-cat="安静">安静</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%80%9D%E5%BF%B5" data-cat="思念">思念</a><span
+                                    class="line">|</span>
+                            </dd>
+                        </dl>
+                        <dl class="f-cb">
+                            <dt><i class="u-icn u-icn-9"></i>主题</dt>
+                            <dd class="last">
+                                <a class="s-fc1 " title=" ?cat=%E7%BB%BC%E8%89%BA" data-cat="综艺">综艺</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%BD%B1%E8%A7%86%E5%8E%9F%E5%A3%B0"
+                                    data-cat="影视原声">影视原声</a><span class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=ACG" data-cat="ACG">ACG</a><span class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%84%BF%E7%AB%A5" data-cat="儿童">儿童</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%A0%A1%E5%9B%AD" data-cat="校园">校园</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%B8%B8%E6%88%8F" data-cat="游戏">游戏</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=70%E5%90%8E" data-cat="70后">70后</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=80%E5%90%8E" data-cat="80后">80后</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=90%E5%90%8E" data-cat="90后">90后</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E7%BD%91%E7%BB%9C%E6%AD%8C%E6%9B%B2"
+                                    data-cat="网络歌曲">网络歌曲</a><span class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=KTV" data-cat="KTV">KTV</a><span class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E7%BB%8F%E5%85%B8" data-cat="经典">经典</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E7%BF%BB%E5%94%B1" data-cat="翻唱">翻唱</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%90%89%E4%BB%96" data-cat="吉他">吉他</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E9%92%A2%E7%90%B4" data-cat="钢琴">钢琴</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E5%99%A8%E4%B9%90" data-cat="器乐">器乐</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=%E6%A6%9C%E5%8D%95" data-cat="榜单">榜单</a><span
+                                    class="line">|</span>
+                                <a class="s-fc1 " title=" ?cat=00%E5%90%8E" data-cat="00后">00后</a><span
+                                    class="line">|</span>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+
+                <ul class="squareUl">
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="u_cover">
+                            <div class="song_cover">
+                                <img>
+                                <!--半透明容器-->
+                                <div class="buttom">
+                                    <a style="right: 10px;bottom: 5px;" class="icon_play" title="播放"
+                                        href="javascript:;"></a>
+                                    <span class="icon_headset"></span>
+                                    <span class="playNumber">666</span>
+
+                                </div>
+                                <p class="dec"> </p>
+                            </div>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!--歌单广场结束-->
+
+
+
+
+            <!--歌曲详情 折叠-->
+            <div id="detailsOfSong" class="detailsOfSong" style="display:none;">
+
+                <div class="f-cb">
+
+                    <div style="position: relative; left: -600px; top: 60px;" class="u-cover u-cover-6 f-fl">
+                        <img id="detailPage_songCover"
+                            src="http://p2.music.126.net/yoRaxBY77koSqhjh52g-DA==/109951165434255510.jpg" class="j-img"
+                            data-src="http://p2.music.126.net/yoRaxBY77koSqhjh52g-DA==/109951165434255510.jpg">
+                        <span class="song_msk"></span>
+                    </div>
+
+                    <div class="cnt" style="position: relative;
+                    float: left;
+                    width: 640px;
+                    height: 195px;
+                    left: 370px;
+                    top: -156px;">
+                        <div class="hd">
+                            <i class="lab u-icn u-icn-37"></i>
+                            <div class="tit">
+                                <em id="detailPage_songName" style="font-size: 24px;" class="f-ff2"></em>
+                            </div>
+                        </div>
+                        <p class="des s-fc4">歌手：<span title="陈致逸 / HOYO-MiX"><a id="detailPage_singer" class="s-fc7"
+                                    href="">陈致逸</a>
+                                <p class="des s-fc4">所属专辑：<a id="detailPage_album" href="" class="s-fc7">
+                                    </a></p>
+
+                                <div style="top: 10px;" class="content-operation">
+                                    <a class="op-playBtn"></a>
+                                    <a class="op-addBtn">
+                                        <div style=" width: 74px;" class="right-Btnicon"></div>
+                                        <div class="add-num">(7323)</div>
+                                    </a>
+                                    <a class="op-retransmission">
+                                        <div style="width: 74px;" class="right-Btnicon"></div>
+                                        <div class="retransmission-num">(144)</div>
+                                    </a>
+                                    <a class="op-download"></a>
+                                    <a class="op-comments">
+                                        <div style="width: 74px;" class="right-Btnicon">
+                                            <div class="comments-num">(230)</div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div style="white-space: pre-line; height: 300px; width: 410px; overflow: scroll;"
+                                    id="lyric-content" class="lyric_div" data-song-id="" data-third-copy="false" ,=""
+                                    copy-from="">
+                                    <br>指挥Conductor:RobertZiegler<br>乐队Orchestra:伦敦爱乐乐团LondonPhilharmonicOrchestra<br>乐队配器Orchestrator:陈致逸Yu-PengChen(HOYO-MiX)<br>小提琴Violin:PhilippeHonore<br>笛子Dizi:屠化冰HuabingTu<br>录音棚RecordingStudio:AirStudios<br>录音师RecordingEngineer:NickWollage<br>混音师MixingEngineer:NickWollage<br>混音助理MixingAssistant:LaurenceAnslow<br>母带制作MasteringEngineer:JohnWebber<br>出品Producedby:HOYO-MiX<br>
+                                </div>
+                    </div>
+                </div>
+
+
+                <div class="songRemarks">
+                    <h3 style="font-size: 20px; margin-left: 10px;">评论</h3>
+                    <div style="height: 10px;"></div>
+                    <div class="redline"></div>
+
+                    <!--发表评论-->
+                    <img style=" width:35px; margin:10px 10px;"
+                        src="https://p3.music.126.net/RHTW2ZsC9bGsqwFPxYNtWQ==/109951163401937144.jpg?param=50y50">
+                    <textarea placeholder="评论" class="remarkArea"></textarea>
+
+                    <button class="commentSubmitBtn">
+                        评论
+                    </button>
+
+                    <div title="评论开始" class="songCommentsStart">
+                        <!--最新评论-->
+                        <div style="font-size: 12px;position: relative; width: 600px; top: -30px; left: 10px; ">最新评论
+                        </div>
+
+                        <div
+                            style="position: relative;left: 10px; top:-25px;width: 600px; height: 1px; background-color: rgb(207, 207, 207);">
+                        </div>
+
+
+                        <!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+
+                        <!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+
+
+                        <!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+
+                        <!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束--><!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+
+                        <!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束--><!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+
+                        <!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束--><!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+
+                        <!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束--><!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+
+                        <!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束--><!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+
+                        <!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束--><!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+
+                        <!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束--><!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+
+                        <!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束--><!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+
+                        <!--单个最新评论-->
+                        <div class="new-oneRemark">
+                            <img style="position: relative;top: 0px; width:35px; height: 35px; margin:0px 10px;">
+                            <div class="new-remark-username"></div>
+                            <div class="new-remark-content"></div>
+                            <div class="new-comments-reply">
+                                <div class="new-reply-userName"></div>
+                                <div class="new-reply-content"></div>
+                            </div>
+
+                            <!--按钮控件-->
+                            <div>
+                                <a class="remark-like"></a>
+                                <div class="divStrip">|</div>
+                                <div class="remark-reply">回复</div>
+                            </div>
+                        </div>
+                        <!--单个评论结束-->
+                    </div>
+                </div>
+
+            </div>
+
+            <!--搜索结果 折叠-->
+            <div id="searchResult" class="searchResult" style="display: none;">
+                <div class="searchBtnDiv">
+                    <input class="m_search_input">
+                    <a class="searchBtnInPageTop"></a>
+                </div>
+
+                <!--导航栏-->
+                <ul class="searchOptionList">
+                    <li class="fst">
+                        <a href="javascript:;" class="searchOptionList_z_slt">
+                            <em>单曲</em>
+                        </a>
+                    </li>
+
+                    <li class="fst">
+                        <a href="javascript:;" class="searchOptionList_z_slt">
+                            <em>歌手</em>
+                        </a>
+                    </li>
+
+                    <li class="fst">
+                        <a href="javascript:;" class="searchOptionList_z_slt">
+                            <em>专辑</em>
+                        </a>
+                    </li>
+
+                    <li class="fst">
+                        <a href="javascript:;" class="searchOptionList_z_slt">
+                            <em>视频</em>
+                        </a>
+                    </li>
+
+                    <li class="fst">
+                        <a href="javascript:;" class="searchOptionList_z_slt">
+                            <em>歌词</em>
+                        </a>
+                    </li>
+
+                    <li class="fst fst_3l">
+                        <a href="javascript:;" class="searchOptionList_z_slt">
+                            <em>歌单</em>
+                        </a>
+                    </li>
+
+                    <li class="fst fst_3l">
+                        <a href="javascript:;" class="searchOptionList_z_slt">
+                            <em>声音主播</em>
+                        </a>
+                    </li>
+
+                    <li class="fst fst_3l">
+                        <a href="javascript:;" class="searchOptionList_z_slt">
+                            <em>用户</em>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!--搜索结果歌曲列表-->
+                <div class="serReLiFthDiv">
+                    <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play" style="top: -9px;"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束-->
+
+                    <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束-->
+
+                    <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束-->
+
+                    <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束--> <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束-->
+
+                    <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束--> <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束-->
+
+                    <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束--> <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束-->
+
+                    <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束-->
+
+
+                    <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play" style="top: -9px;"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束-->
+
+                    <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束-->
+
+                    <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束-->
+
+                    <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束--> <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束-->
+
+                    <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束--> <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束-->
+
+                    <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束--> <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束-->
+
+                    <!--单条搜索结果-->
+                    <div class="searchResultList">
+                        <div class="searchResultList_item">
+                            <div class="searchResultList_item_hd">
+                                <a class="searchResultList_item_play"></a>
+                            </div>
+                        </div>
+
+                        <div class="searchResultList_songName">
+                            <a class="searchResultList_songName_text"> 歌曲名1</a>
+                        </div>
+
+                        <div class="searchResultList_singer">
+                            <a class="searchResultList_singer_text">歌手</a>
+                        </div>
+
+                        <div class="searchResultList_al">
+                            <a class="searchResultList_al_text">专辑</a>
+                        </div>
+
+                        <div class="searchResultList_duration">
+                            时长
+                        </div>
+                    </div>
+                    <!--单条搜索结果结束-->
+                </div>
+
+
+            </div>
+
+            <!--折叠个人详情页-->
+            <div class="userPage" style="display: none;">
+                <div class="userPageMain">
+                    <h3 class="userO_h3">个人设置</h3>
+                    <div class="user_sub_op">
+                        <div class="nkn_tit">昵称：</div>
+                        <input value="昵称" class="userNkN_input">
+                        <span id="warningDuplicated" style=" position: relative; left: -270px; color: white; top: 3px;">!&nbsp;昵称重复</span>
+                        <div class="userPage_intro">介绍：</div>
+                        <textarea class="user_intro_input" ></textarea>
+
+                        <div class="user_changeImg">
+                            <img class="UserImg_changeImg" src="http://p1.music.126.net/RHTW2ZsC9bGsqwFPxYNtWQ==/109951163401937144.jpg?param=140y140">
+                            <a class="uploadImg_Btn">更换头像</a>
+                        </div>
+
+                        <button class="submitIntroNkn_Btn">保存</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--播放-->
+            <div class="playerBar">
+                <div class="wrap">
+                    <!--按钮-->
+                    <div class="playBtns">
+                        <a class="prev" href="javascript:;" title="上一首"></a>
+                        <a class="play" href="javascript:;" title="播放/暂停"></a>
+                        <a class="next" href="javascript:;" title="下一首"></a>
+                    </div>
+
+                    <!--歌曲图片-->
+                    <div class="songHead">
+                        <img id="songCoverImg"
+                            src='https://p1.music.126.net/cu9T_JCh5mt3aipWJoy03w==/109951167767293721.jpg?param=34y34'>
+                    </div>
+
+                    <!--进度条-->
+                    <div class="playWrap">
+                        <div class="playInfo">
+                            <a id="playingSongName" class="ellipsis songName" href="javascript:;" title="TruE">TruE</a>
+                            <a id="playingSongSinger" class="fl singer ellipsis" href="javascript:;" title="黄龄">黄龄</a>
+                        </div>
+                        <!--进度条-->
+                        <div class="progressBar">
+                            <div class="cur" style="width: 0%;">
+                                <span class="btn"></span>
+                            </div>
+                            <div lang="barBg"></div>
+                        </div>
+                        <div class="playTime">
+                            <em id="Current_duration">00:00</em>
+                            <div id="Total_song_duration" style="position: relative;left: 30px; bottom: 12px;">/03:11
+                            </div>
+                        </div>
+
+                        <!--收藏-->
+                        <div class="optionWrap">
+                            <a class="add" href="javascript:;" title="收藏">&nbsp;&nbsp;</a>
+                            <a class="collection" href="javascript:;" title="分享">分享</a>
+                        </div>
+
+                        <div class="setting">
+                            <!--音量-->
+                            <a class="volume"></a>
+                            <!--音量调整-->
+                            <div class="volumeWrap">
+                                <div class="barBg"></div>
+                                <div class="soundBg">
+                                    <div class="currentVolume"></div>
+                                    <div class="btnVolume"></div>
+                                </div>
+                            </div>
+
+                            <!--循环-->
+                            <a class="loop"></a>
+
+                            <!--播放列表-->
+                            <a class="song_list"></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--播放结束-->
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<!--需要播放音乐功能的代码应放到播放脚本的后面，传入歌曲时长-->
+<script type="text/javascript" src="./script/play.js"></script><!--播放-->
+<script type="text/javascript" src="./script/volume.js"></script><!--音量-->
+<script type="text/javascript" src="./script/login.js"></script><!--登录-->
+<script type="text/javascript" src="./script/rmtj.js"></script><!--热门推荐-->
+<script type="text/javascript" src="./script/rank list.js"></script><!--榜单-->
+<script type="text/javascript" src="./script/slider.js"></script><!--轮播图-->
+<script type="text/javascript" src="./script/search.js"></script><!--搜索-->
+<script type="text/javascript" src="./script/searchResultsPage.js"></script><!--搜索页js-->
+<script type="text/javascript" src="./script/pageSwitch_aList.js"></script><!--页面切换 歌单-->
+<script type="text/javascript" src="./script/pageSwitch_ListSquare.js"></script><!--歌单广场-->
+<script type="text/javascript" src="./script/pageSwitch_songDetails.js"></script><!--歌曲详情-->
+<script type="text/javascript" src="./script/userData.js"></script><!--个人信息-->
+
+</html>
